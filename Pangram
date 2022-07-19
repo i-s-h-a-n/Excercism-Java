@@ -1,0 +1,11 @@
+public class PangramChecker {
+    public boolean isPangram(String input) {
+        for(char character = 'A'; character <= 'Z'; character++) {
+            if(input.indexOf(character) < 0 && input.indexOf(character+32) < 0) {
+                return false;
+            }
+        }
+        return true;
+        
+    }
+}
