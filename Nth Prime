@@ -1,0 +1,29 @@
+import java.util.List;
+import java.util.ArrayList;
+class PrimeCalculator {
+    int nth(int nth) {
+      if(nth <= 0) {
+        throw new IllegalArgumentException();
+      }
+    
+      int i = 2;
+      int counter = 0;
+      boolean isPrime;
+      List<Integer> multiples = new ArrayList<Integer>();
+      while(counter < nth) {
+        isPrime = true;
+        for(int j = 0; j < multiples.size(); j++) {
+          if(i % multiples.get(j) == 0 ) {
+            isPrime = false;
+            break;
+          }
+        }
+        if(isPrime) {
+          counter++;
+        }
+        multiples.add(i);
+        i++;
+      }
+      return i-1;
+    }
+}
