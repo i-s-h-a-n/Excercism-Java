@@ -1,17 +1,19 @@
 export const hey = (message) => {
-  let response = 'Whatever.';
   const msg = message.trim();
-  const allNumbers = !/[^\W0-9]+/.test(msg);
-  const allCaps = !/[a-z]+/.test(msg) && !allNumbers;
-  const question = msg.endsWith('?');
-  if (msg === '') {
-    response = 'Fine. Be that way!';
-  } else if (allCaps && question) {
-    response = 'Calm down, I know what I\'m doing!';
-  } else if (allCaps) {
-    response = 'Whoa, chill out!';
-  } else if (question) {
-    response = 'Sure.';
-  }
-  return response;
+  const isAllNumbers = !/[^\W0-9]+/.test(msg);
+  const isAllUppercase = !/[a-z]+/.test(msg) && !isAllNumbers;
+  const isQuestion = msg.endsWith('?');
+  return correspondingMessage(msg, isAllUppercase, isQuestion);
 };
+
+const correspondingMessage = (msg, isAllUppercase, isQuestion) =>{
+  if (msg === '') 
+    return 'Fine. Be that way!';
+  if (isAllUppercase && isQuestion)
+    return "Calm down, I know what I\'m doing!";
+  if (isAllUppercase) 
+    return 'Whoa, chill out!';
+  if (isQuestion)
+    return 'Sure.';
+  return 'Whatever.';
+}
