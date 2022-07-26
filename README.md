@@ -15,7 +15,9 @@ https://exercism.org/tracks/java/exercises/collatz-conjecture/solutions/ishantha
 Problem 1: RNA Transcription
 https://exercism.org/tracks/javascript/exercises/rna-transcription/solutions/ishanthapa2607
 
-Problem 2:
+Problem 2: Bob
+https://exercism.org/tracks/javascript/exercises/bob/solutions/ishanthapa2607
 
-Problem 3:
+Problem 3: Luhn
+https://exercism.org/tracks/javascript/exercises/luhn/solutions/ishanthapa2607
 
