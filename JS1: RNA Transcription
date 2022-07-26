@@ -1,0 +1,15 @@
+export const toRna = (dna) => {
+  let rna='';
+  [...dna].forEach((nucleotide) => rna += toRnaNucleotide(nucleotide))
+  return rna;
+};
+export const toRnaNucleotide = (nucleotide) => {
+    if(nucleotide == 'G')
+      return 'C';
+    if(nucleotide == 'C')
+      return 'G';
+    if(nucleotide == 'T')
+      return 'A';
+    if(nucleotide == 'A')
+      return 'U';
+}
